@@ -1,0 +1,29 @@
+@import 'mixins/globlarSetting';
+@import 'mixins/nav';
+@import 'mixins/main';
+@import 'mixins/card';
+
+
+
+html,x
+body {
+  @include global-style(lightgray, 'Arial, Helvetica, sans-serif');
+}
+
+header {
+  @include header-style(lightgray, 0);
+}
+
+
+nav {
+  @include nav-style(black, 15vh);
+  background-image: url('../fondo.svg');
+}
+
+main {
+  @include main-style(200px);
+
+  .contenedor-producto {
+    @include product-container-style(white, 10px);
+  }
+}

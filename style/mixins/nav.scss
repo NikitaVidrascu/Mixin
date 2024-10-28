@@ -1,0 +1,60 @@
+@mixin header-style($bg-color: black, $padding: 0) {
+  width: 100%;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  background-color: $bg-color;
+  padding: $padding;
+}
+
+@mixin nav-style($bg-color, $height) {
+    width: 100%;
+    height: $height;
+    background-color: $bg-color; // Aplica el color de fondo
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  
+    .imagen-logo {
+      margin-left: 10px;
+      width: 100px;
+      height: 100px;
+      border-radius: 50px;
+    }
+  
+    .izquierda-nav,
+    .derecha-nav {
+      width: 25vw;
+      display: flex;
+      align-items: center;
+  
+      &.izquierda-nav {
+        justify-content: space-evenly;
+      }
+  
+      &.derecha-nav {
+        justify-content: space-around;
+      }
+    }
+  
+    .titulo {
+      color: white;
+      text-decoration: none;
+    }
+  
+    .boton-nav {
+      width: 100px;
+      height: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      border-radius: 10px;
+      cursor: pointer;
+      color: white;
+  
+      .texto-boton-nav {
+        margin-left: 5px;
+      }
+    }
+  }
